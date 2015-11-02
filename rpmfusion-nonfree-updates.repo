@@ -22,3 +22,27 @@ enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
 
+[rpmfusion-nonfree-updates-22]
+name=RPM Fusion for Fedora 22 - Nonfree - Updates
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/22/$basearch/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-22&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-22
+
+[rpmfusion-nonfree-updates-debuginfo-22]
+name=RPM Fusion for Fedora 22 - Nonfree - Updates Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/22/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-debug-22&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-22
+
+[rpmfusion-nonfree-updates-source-22]
+name=RPM Fusion for Fedora 22 - Nonfree - Updates Source
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/22/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-source-22&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-22
+

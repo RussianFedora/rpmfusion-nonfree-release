@@ -2,8 +2,8 @@
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
-Version:        22
-Release:        1
+Version:        23
+Release:        0.1.R
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -86,6 +86,11 @@ ln -s $(basename %{SOURCE24}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+* Mon Nov  2 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23.0.1.R
+- use 22 repos with current 23 repos. Also enable updates-testing.
+  This package will be upgraded by official as soon as it will be
+  available in RPM Fusion repository
+
 * Sat May 23 2015 Nicolas Chauvet <kwizart@gmail.com> - 22-1
 - Update to Final F-22
 
