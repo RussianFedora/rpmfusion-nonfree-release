@@ -6,3 +6,4 @@ cc9f59be0da6d0064124406435622931  rpmfusion-nonfree-release.spec
 4a40072e544a8bcb190d57d54afe76a2  rpmfusion-nonfree.repo
 74d0a090c474e795fd1533a34dddebad  rpmfusion-nonfree-updates.repo
 5d40b0cfbe046323182832e2d848ab2c  rpmfusion-nonfree-updates-testing.repo
+c1815146ef99937ce83ba36f5ac6c3c4  RPM-GPG-KEY-rpmfusion-nonfree-fedora-25-primary

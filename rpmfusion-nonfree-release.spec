@@ -2,8 +2,8 @@
 %define repo nonfree
 
 Name:           rpmfusion-%{repo}-release
-Version:        23
-Release:        0.3.R
+Version:        24
+Release:        0.1.R
 Summary:        RPM Fusion (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -16,6 +16,7 @@ Source4:        rpmfusion-%{repo}-rawhide.repo
 Source22:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-22-primary
 Source23:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-23-primary
 Source24:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-24-primary
+Source25:       RPM-GPG-KEY-rpmfusion-%{repo}-fedora-25-primary
 BuildArch:      noarch
 
 Requires:       system-release >= %{version}
@@ -61,6 +62,7 @@ install -d -m755 \
     %{SOURCE22} \
     %{SOURCE23} \
     %{SOURCE24} \
+    %{SOURCE25} \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # compatibility symlink for easy transition to F11
@@ -70,6 +72,7 @@ ln -s $(basename %{SOURCE22}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 ln -s $(basename %{SOURCE22}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-22
 ln -s $(basename %{SOURCE23}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-23
 ln -s $(basename %{SOURCE24}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-24
+ln -s $(basename %{SOURCE25}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-25
 
 # Links for the keys
 ln -s $(basename %{SOURCE23}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-%{repo}-fedora-latest
@@ -86,13 +89,16 @@ ln -s $(basename %{SOURCE24}) $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
-* Wed Nov 11 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23.0.3.R
+* Sat Apr  2 2016 Arkady L. Shane <ashejn@russianfedora.pro> - 24-0.1.R
+- update for RFRemix 24
+
+* Wed Nov 11 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23-0.3.R
 - enable updates-testing repo again
 
-* Mon Nov  2 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23.0.2.R
+* Mon Nov  2 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23-0.2.R
 - disable updates-testing
 
-* Mon Nov  2 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23.0.1.R
+* Mon Nov  2 2015 Arkady L. Shane <ashejn@russianfedora.pro> - 23-0.1.R
 - use 22 repos with current 23 repos. Also enable updates-testing.
   This package will be upgraded by official as soon as it will be
   available in RPM Fusion repository
